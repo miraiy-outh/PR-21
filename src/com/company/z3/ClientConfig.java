@@ -3,9 +3,8 @@ package com.company.z3;
 import java.util.Scanner;
 
 public class ClientConfig {
-    public static Client configClient() {
+    public void configClient() {
         Scanner scan = new Scanner(System.in);
-        Client client = null;
         ICreateDocument iCreateDocument= null;
         System.out.println("Тип документа:");
         String name = scan.nextLine();
@@ -17,10 +16,9 @@ public class ClientConfig {
                 break;
         }
         try {
-            client = new Client(iCreateDocument);
+            new JMenuTest(iCreateDocument);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return client;
     }
 }

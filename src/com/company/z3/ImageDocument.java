@@ -1,14 +1,17 @@
 package com.company.z3;
 
-public class ImageDocument implements IDocument {
-    @Override
-    public void neww() {
+import javax.swing.*;
 
+public class ImageDocument implements IDocument {
+
+    @Override
+    public JMenuItem neww() {
+        return null;
     }
 
     @Override
-    public void open() {
-
+    public JMenuItem open() {
+        return null;
     }
 
     @Override

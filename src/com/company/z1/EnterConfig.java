@@ -6,24 +6,24 @@ public class EnterConfig {
     public static Enter configEnter() {
         Scanner scan = new Scanner(System.in);
         Enter enter = null;
-        Complex complex = null;
+        ComplexFactory complexFactory = null;
         System.out.println("Форма числа:");
         String name = scan.nextLine();
         switch (name) {
             case "показательная":
-                complex = new ExpComplex();
+                complexFactory = new ExpComplexFactory();
                 break;
             case "тригонометрическая":
-                complex = new TrigComplex();
+                complexFactory = new TrigComplexFactory();
                 break;
             case "алгебраическая":
-                complex = new AlgComplex();
+                complexFactory = new AlgComplexFactory();
                 break;
             default:
                 break;
         }
         try {
-            enter = new Enter(complex);
+            enter = new Enter(complexFactory);
         } catch (Exception e) {
             e.printStackTrace();
         }

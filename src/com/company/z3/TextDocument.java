@@ -1,15 +1,23 @@
 package com.company.z3;
 
+import javax.swing.*;
+
 public class TextDocument implements IDocument {
 
     @Override
-    public void neww() {
-        System.out.println("Создан новый документ");
+    public JComponent neww() {
+        JLabelTest jLabelTest = new JLabelTest("new");
+        JTextField jTextField;
+        jTextField = jLabelTest.neww();
+        return jTextField;
     }
 
     @Override
-    public void open() {
-
+    public JComponent open() {
+        JLabelTest jLabelTest = new JLabelTest("open");
+        JTextField jTextField;
+        jTextField = jLabelTest.neww();
+        return jTextField;
     }
 
     @Override
